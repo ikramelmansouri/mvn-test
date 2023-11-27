@@ -53,12 +53,12 @@ public class TutorialController {
   public ResponseEntity<Tutorial> getTutorialById(@PathVariable("id") long id) {
     Optional<Tutorial> tutorialData = tutorialRepository.findById(id);
 
-   /* if (tutorialData.isPresent()) {
+   if (tutorialData.isPresent()) {
       return new ResponseEntity<>(tutorialData.get(), HttpStatus.OK);
     } else {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    }*/
-      return new ResponseEntity<>(null, HttpStatus.CREATED);
+    }
+      //return new ResponseEntity<>(null, HttpStatus.CREATED);
 
   }
 
